@@ -35,5 +35,4 @@ spec:
       volumes:
          - name: postgres-val
            persistentVolumeClaim:
-             claimName: pvc1
-             
+             claimName: ocal-storage-pvc
