@@ -1,0 +1,31 @@
+#voting
+votingApp:
+  appName: voting-deployment   # this is for the name of the deployment
+  replica: 5
+  image: kodekloud/examplevotingapp_vote:v1
+# result
+resultApp:
+  appName: result-deployment   # this is for the name of the deployment
+  replica: 5
+  image: kodekloud/examplevotingapp_result:v1 
+# postgres
+postgresDB:
+  appName: postgres-database-deployment   # this is for the name of the deployment
+  replica: 1
+  image: postgres  
+# postgres
+redisDB:
+  appName: redis-deployment   # this is for the name of the deployment
+  replica: 1
+  image: redis   
+# worker
+worker:
+  appName: worker-deployment   # this is for the name of the deployment
+  replica: 1
+  image: kodekloud/examplevotingapp_worker:v1    
+#storage- pvc & pv
+pvc:
+  accessMode: ReadWriteOnce
+  storageCapacity: 1Gi  
+pv:
+  ccessMode: ReadWriteOnce  
