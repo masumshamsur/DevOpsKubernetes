@@ -28,4 +28,4 @@ pvc:
   accessMode: ReadWriteOnce
   storageCapacity: 1Gi  
 pv:
-  ccessMode: ReadWriteOnce  
+  accessMode: ReadWriteOnce  
