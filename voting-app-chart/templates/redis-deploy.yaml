@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.redisDB.appName }}
+  name: {{ .Release.Name }}-{{ .Values.redisDB.appName }}
   labels:
     app: demo-voting-app
 spec:

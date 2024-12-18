@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.resultApp.appName }}
+  name: {{ .Release.Name }}-{{ .Values.resultApp.appName }}
   labels:
     name: result-deploy
     app: demo-voting-app
