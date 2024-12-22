@@ -1,6 +1,7 @@
 apiVersion: v1 
 kind: ConfigMap
 metadata:
-  name: postgres-configmap
+  name: {{ .Values.configmap.name }}
 data :
   authMethod : trust
+  customHeader: {{ .Values.configmap.data.customHeader }}

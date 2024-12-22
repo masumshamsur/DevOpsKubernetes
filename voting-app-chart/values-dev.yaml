@@ -34,4 +34,4 @@ pv:
 configmap:
   name: myhelmapp-configmap-v1
   data:
-    customHeader: 'This app was deployed with helm!'
+    customHeader: 'This is on the DEV environment!'
