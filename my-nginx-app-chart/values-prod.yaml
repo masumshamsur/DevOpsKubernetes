@@ -1,0 +1,14 @@
+deployment:
+  appName: ginx-pod-deployment
+  replica: 2
+  image : masum012924/hello_docker:1.1.3 
+  containterPort: 80
+
+service:  
+  type: NodePort
+  nodePort: 30008
+
+configmap:
+  name: myhelmapp-configmap-v1
+  data:
+    CUSTOM_HEADER: 'This is on the PROD environment!'  

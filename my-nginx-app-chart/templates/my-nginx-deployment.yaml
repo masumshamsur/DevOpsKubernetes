@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-{{ .Values.deployment.appName }}
+  labels:
+    app: my-nainx-app
+spec:
+  replicas: {{ .Values.deployment.replica }}
+  selector:
+    matchLabels:
+      app: my-nainx-app
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: my-nainx-app
+    spec:
+      containers:
+        - name: my-app-nginx
+          image: {{ .Values.deployment.image }} 
+          ports:
+            - containerPort: {{ .Values.deployment.containterPort}}
+          envFrom:
+            - configMapRef:
+                 name: {{ .Values.configmap.name }}  
